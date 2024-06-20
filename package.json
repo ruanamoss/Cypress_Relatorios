@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
-    "cy:open:chrome": "cypress open --browser chrome",
-    "cy:run:chrome": "cypress run --browser chrome"
+    "cy:open:chrome": "npx cypress open --browser chrome",
+    "cy:run:chrome": "npx cypress run --browser chrome"
   },
   "keywords": [],
   "author": "",
