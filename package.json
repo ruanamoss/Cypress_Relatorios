@@ -1,19 +1,24 @@
 {
-  "name": "curso-cypress",
+  "name": "cypress",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cy:open:chrome": "cypress open --browser chrome",
+    "cy:run:chrome": "cypress run --browser chrome"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "cypress": "^3.6.0"
+    "cypress": "^13.6.4"
   },
   "devDependencies": {
-    "cypress-xpath": "^2.0.1"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-multi-reporters": "^1.6.4",
+    "cypress-xpath": "^2.0.1",
+    "mocha-junit-reporter": "^2.2.1"
   }
 }
