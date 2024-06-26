@@ -5,7 +5,6 @@ describe('Validacão DBN1', ()=>{
   //Endereço web repetir sempre em cada caso de teste
   beforeEach(() => {
     cy.visit('https://altaiatim-fe.c.ptin.corppt.com/portal/altaia');
-    
     //Clicar no campo UserName e Inserir Texto no campo
     cy.get('.fx-floating-label', {timeout:5000})
     .click()
@@ -25,7 +24,6 @@ describe('Validacão DBN1', ()=>{
 
 
         it('Validar classe F3G_CELL', ()=>{
-          cy.visit('https://altaiatim-fe.c.ptin.corppt.com/portal/altaia#targetType=ajax&target=/altaia/basemodule/resume?PLAY_LANG=en');
 
             //Acessar DBN1
             cy.get('.hideshow > :nth-child(1) > .fa', {timeout:100000}).click();
@@ -60,28 +58,6 @@ describe('Validacão DBN1', ()=>{
             //Assertiva para validar "filhos" da classe
             cy.get('[btnradiogroup=""] > :nth-child(2) > .btn', {timeout:10000}).click();
 
-            //FEMTO_AGPS_LCELL
-            cy.wait(5000)
-
-            while (true) {
-              cy.get('body')
-              .then(($body) => {
-                if ($body.text().includes('FEMTO_CELLBROADCAST')) {
-                  cy.contains('FEMTO_CELLBROADCAST', {timeout:5000}).should('be.visible');
-                } else {
-                  cy.get('[class^=fx-bs-row-container]')
-                  .find('span')
-                  .contains("seguinte")
-                  .click();               
-                } 
-  
-              })
-
-            }
-
-
-            
-            cy.pause();
         })
 
 

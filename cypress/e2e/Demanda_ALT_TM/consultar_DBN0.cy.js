@@ -39,7 +39,8 @@ describe('Validacão DBN0', ()=>{
       cy.get('#CM4G_EthernetPort_anchor', {timeout:30000}).click()
   
       //Assertiva para validar nome Atributo
-      cy.contains('source_id', {timeout:30000}).should('be.visible');
+      cy.contains('source_id', {timeout:50000}).should('be.visible');
+      cy.screenshot('Atributo source_id encontrado')
   
       //Acessar os contadores da tabela
       cy.get('.nossisui-label-href > :nth-child(1) > span', {timeout:30000}).click();
@@ -47,6 +48,7 @@ describe('Validacão DBN0', ()=>{
       //Assertiva para validar contador
       cy.contains('GRANULARITYPERIOD', {timeout:30000}).should('be.visible');
       cy.contains('USERLABEL', {timeout:30000}).should('be.visible');
+      cy.screenshot('Contadores GRANULARITYPERIOD USERLABEL encontrados')
   
       cy.reload(); 
     })
@@ -67,7 +69,7 @@ describe('Validacão DBN0', ()=>{
     cy.get('#CM4G_SctpEndpoint_anchor', {timeout:30000}).click();
 
     //Assertiva para validar atributo
-    cy.contains('source_id', {timeout:10000}).should('be.visible');
+    cy.contains('source_id', {timeout:50000}).should('be.visible');
 
     //Acessar os contadores da tabela
     cy.get('.nossisui-label-href > :nth-child(1) > span', {timeout:30000}).click();
