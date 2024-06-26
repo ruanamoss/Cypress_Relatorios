@@ -12,7 +12,7 @@ describe('Verificar cores dos IPhones', ()=>{
 
         cy.get('#twotabsearchtextbox')
         .click()
-        .type('IPhones 13 Pro')
+        .type('IPhones 13 pro')
         
         cy.get('#nav-search-submit-button').click()
 
