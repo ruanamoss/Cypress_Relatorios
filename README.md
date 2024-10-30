@@ -24,7 +24,7 @@ npx cypress open
 ```
 npx cypress run
 ```
-- Abrir o arquivo "index.html" no diretório GitHub\Cypress_Relatorios\cypress\reports\html
+- Abrir o arquivo "index.html" no diretório para verificar o relatório
 ```
-npx cypress run
+C:\Users\ruan.silva\Documents\GitHub\Cypress_Relatorios\cypress\reports\html
 ```
